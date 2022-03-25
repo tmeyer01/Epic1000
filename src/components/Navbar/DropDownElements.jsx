@@ -3,17 +3,19 @@ import { Link } from 'react-router-dom'
 
 
 export const DropDownMenu = styled.ul`
-  background: red;
+  background: #1888ff;
   width: 200px;
   position: absolute;
   top: 80px;
   list-style: none;
   text-align: start;
+  border-radius: 0px 0px 10px 10px
 `
 
 export const DropListItem = styled.li`
   background: #1888ff;
   cursor: pointer;
+  border-radius: 0px 0px 20px 20px;
 
   &.hover{
     background: #5cabff;
