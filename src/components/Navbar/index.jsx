@@ -6,7 +6,7 @@ import { BsFillCaretDownFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { FaBars, FaTimes } from "react-icons/fa";
 // import {FaTimes} from 'react-icons/fa'
-import Dropdown from "./DropDown";
+import Dropdown from "./DropDownMenu";
 
 import {
   Nav,
@@ -81,7 +81,7 @@ const Navbar = () => {
             </NavItem>
             <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
               <NavLinks to="/More" onClick={closeMobileMenu}>
-                More
+               <span>More</span> 
                 <BsFillCaretDownFill />
               </NavLinks>
               {dropdown && <Dropdown />}
