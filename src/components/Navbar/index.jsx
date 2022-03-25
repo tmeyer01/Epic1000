@@ -6,7 +6,7 @@ import { BsFillCaretDownFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { FaBars, FaTimes } from "react-icons/fa";
 // import {FaTimes} from 'react-icons/fa'
-import Dropdown from "./DropDownMenu";
+import Dropdown from "../DropDownMenu/DropDownMenu";
 
 import {
   Nav,
@@ -19,6 +19,7 @@ import {
 } from "./NavElements";
 
 const Navbar = () => {
+  
   const [isOpen, setIsOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
