@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import MobileSideBar from '../components/MobileSideBar/index'
 import Nav from '../components/Navbar'
 import Hero from '../components/Hero'
-function index() {
+
+
+const Home = () =>{
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    // console.log("clicked", isOpen)
+    setIsOpen((prevOpen) => !prevOpen)
+  }
+
   return (
     <>
-    {/* <Sidebar isOpen={isOpen} toggle={toggle}/> */}
-    <Nav/>
+    <MobileSideBar isOpen={isOpen} toggle={toggle}/>
+    <Nav toggle={toggle}/>
     <div className="sections">
       <Hero />
      
@@ -14,4 +25,4 @@ function index() {
   )
 }
 
-export default index
+export default Home
