@@ -8,6 +8,7 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  /* width: 10%; */
 `;
 
 
@@ -85,10 +86,14 @@ export const NavLinks = styled(Link)`
   height: 100%;
   cursor: pointer;
 
-  &.active {
+  &:active {
     border-bottom: 3px solid #fff;
   }
-  &.hover {
+  &:hover {
     border-bottom: 3px solid #fff;
+  }
+
+  span{
+    padding-right: .2em;
   }
 `;
