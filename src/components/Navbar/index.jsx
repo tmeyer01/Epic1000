@@ -6,7 +6,7 @@ import { BsFillCaretDownFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { FaBars, FaTimes } from "react-icons/fa";
 // import {FaTimes} from 'react-icons/fa'
-import Dropdown from "../DropDownMenu/DropDownMenu";
+import Dropdown from "../DropDownMenu";
 
 import {
   Nav,
@@ -18,20 +18,22 @@ import {
   NavLinks,
 } from "./NavElements";
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   
-  const [isOpen, setIsOpen] = useState(false);
+  console.log()
+
+  const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
-  const toggle = () => {
-    console.log("clicked");
-    console.log("isOpen", isOpen);
-    setIsOpen((prevOpen) => !prevOpen);
+  const handleClick = () => {
+    setClick((prevClick) => !prevClick);
   };
 
-  const closeMobileMenu = () => setIsOpen(false);
+  const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
+    
+    console.log("HELLOO")
     if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
@@ -47,6 +49,8 @@ const Navbar = () => {
     }
   };
 
+  console.log(toggle)
+  
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
@@ -58,7 +62,8 @@ const Navbar = () => {
           </NavLogo>
          
           <MobileIcon onClick={toggle}>
-            {isOpen ? <FaBars /> : <FaTimes />}
+            <FaBars />
+            {/* {isOpen ? <FaBars /> : <FaTimes />} */}
           </MobileIcon>
           
           <NavMenu>
@@ -77,15 +82,16 @@ const Navbar = () => {
             <NavItem>
               <NavLinks to="/Forum">Forum</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="/Buckshopt">Buckshot</NavLinks>
-            </NavItem>
             <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
               <NavLinks to="/More" onClick={closeMobileMenu}>
                <span>More</span> 
                 <BsFillCaretDownFill />
               </NavLinks>
               {dropdown && <Dropdown />}
+            </NavItem>
+            
+            <NavItem>
+              <NavLinks id="buck" to="/Buckshot">Buckshot</NavLinks>
             </NavItem>
           </NavMenu>
           </NavBarContainer>
