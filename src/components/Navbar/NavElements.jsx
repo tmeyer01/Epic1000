@@ -50,8 +50,22 @@ export const NavLogo = styled(Link)`
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
 `
+
+
+// export const NavLogoImg = styled.img`
+//   height: 90%;
+
+//   @media screen and (max-width: 480px){
+//     width: 50%;
+//   }
+
+//   @media screen and (max-width: 786px){
+//     font-size: 80%;
+//   }
+
+// `
 
 export const NavIcon = styled.div`
   /* margin-left: 0.5rem;

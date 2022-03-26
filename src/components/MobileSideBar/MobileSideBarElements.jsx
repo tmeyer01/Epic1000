@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 import {FaTimes} from 'react-icons/fa'
 
 export const SidebarContainer = styled.div`
-  position: fixed;
-  z-index: 999;
+  /* position: fixed; */
+  position: absolute;
+  /* z-index: 999; */
   height: 100%;
   width: 100%;
   background-color: #0d0d0d;
   display: grid;
   align-items: center;
-  top:0;
+  top:80px;
   left:0;
-  transition: 1.8 ease-in-out;
+  transition: 1.2s ease-in-out;
   opacity:${({isOpen}) => (isOpen ? '100%' : '0')};
   top: ${({isOpen}) => (isOpen ? '0' : '-100%')};;
   /* opacity: ${({isOpen}) => (isOpen ? '100%' : '0')}; 

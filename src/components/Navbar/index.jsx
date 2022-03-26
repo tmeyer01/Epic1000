@@ -4,6 +4,7 @@ import { useState } from "react";
 import { GiMountainRoad } from "react-icons/gi";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import logo from '../../images/logoWithWhiteOutline.png'
 import { FaBars, FaTimes } from "react-icons/fa";
 // import {FaTimes} from 'react-icons/fa'
 import Dropdown from "../DropDownMenu";
@@ -12,13 +13,14 @@ import {
   Nav,
   NavBarContainer,
   NavLogo,
+  NavLogoImg,
   MobileIcon,
   NavMenu,
   NavItem,
   NavLinks,
 } from "./NavElements";
 
-const Navbar = ({toggle}) => {
+const Navbar = ({isOpen, toggle}) => {
   
   console.log()
 
@@ -59,11 +61,12 @@ const Navbar = ({toggle}) => {
           <NavLogo to="/">
             BC EPIC 1000
             <GiMountainRoad />
+            {/* <NavLogoImg alt="logo"  src={logo}/> */}
           </NavLogo>
          
           <MobileIcon onClick={toggle}>
-            <FaBars />
-            {/* {isOpen ? <FaBars /> : <FaTimes />} */}
+            {/* <FaBars /> */}
+            {isOpen ?  <FaTimes /> : <FaBars />}
           </MobileIcon>
           
           <NavMenu>

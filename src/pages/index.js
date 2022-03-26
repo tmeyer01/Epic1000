@@ -16,7 +16,7 @@ const Home = () =>{
   return (
     <>
     <MobileSideBar isOpen={isOpen} toggle={toggle}/>
-    <Nav toggle={toggle}/>
+    <Nav toggle={toggle} isOpen={isOpen}/>
     <div className="sections">
       <Hero />
      
