@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import {FaTimes} from 'react-icons/fa'
 
 export const SidebarContainer = styled.div`
-  /* position: fixed; */
-  position: absolute;
-  /* z-index: 999; */
+  position: fixed;
+  /* position: absolute; */
+  z-index: 999;
   height: 100%;
   width: 100%;
   background-color: #0d0d0d;
