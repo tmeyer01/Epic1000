@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { Button } from '../Button/index'
 // import { Dropdown } from './DropDown'
 import { GiMountainRoad } from "react-icons/gi";
@@ -18,11 +18,12 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavNonLink,
 } from "./NavElements";
 
 const Navbar = ({isOpen, toggle}) => {
   
-  console.log()
+ 
 
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
@@ -33,9 +34,7 @@ const Navbar = ({isOpen, toggle}) => {
 
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
-    
-    console.log("HELLOO")
+  const onMouseEnter = () => {  
     if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
@@ -51,12 +50,26 @@ const Navbar = ({isOpen, toggle}) => {
     }
   };
 
-  console.log(toggle)
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if(window.scrollY >= 80) {
+      setScrollNav(true)
+    } else {
+      setScrollNav(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav)
+  }, [])
+
+ 
   
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav>
+        <Nav scrollNav={scrollNav}>
           <NavBarContainer>
           <NavLogo to="/">
             BC EPIC 1000
@@ -86,10 +99,10 @@ const Navbar = ({isOpen, toggle}) => {
               <NavLinks to="/Forum">Forum</NavLinks>
             </NavItem>
             <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-              <NavLinks to="/More" onClick={closeMobileMenu}>
-               <span>More</span> 
+              <NavNonLink onClick={closeMobileMenu}>
+               <span >More</span> 
                 <BsFillCaretDownFill />
-              </NavLinks>
+              </NavNonLink>
               {dropdown && <Dropdown />}
             </NavItem>
             

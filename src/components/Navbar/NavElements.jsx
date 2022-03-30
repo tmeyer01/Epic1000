@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  //background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   /* height: 80px;
   display: flex;
   justify-content: center;
@@ -10,9 +10,9 @@ export const Nav = styled.nav`
   font-size: 1.2rem;
   width: 10%; */
 
-  /* background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')}; */
+  background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
   height: 80px;
-  /* margin-top: -80px; */
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,10 +129,28 @@ export const NavLinks = styled(Link)`
   span{
     padding-right: .2em;
   }
-  /* buck{
-    color: green;
-    @media screen and (max-width: 1326px){
-    display: none;
-  } */
-  //}
+ 
+`;
+
+export const NavNonLink = styled.div`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &:active {
+    border-bottom: 3px solid #fff;
+  }
+  &:hover {
+    border-bottom: 3px solid #fff;
+    background: ${({scrollNav}) => (scrollNav ?  'transparent' : '#000')};
+  }
+
+  span{
+    padding-right: .2em;
+  }
+ 
 `;
