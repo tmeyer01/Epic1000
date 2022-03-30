@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MobileSideBar from '../components/MobileSideBar/index'
 import Nav from '../components/Navbar'
 import Hero from '../components/Hero'
+import Footer from '../components/Footer'
 
 
 const Home = () =>{
@@ -42,7 +43,7 @@ const Home = () =>{
     <Nav toggle={toggle} isOpen={isOpen}/>
     <div className="sections">
       <Hero />
-     
+      <Footer/>
     </div>
   </>
   )
