@@ -20,14 +20,10 @@ function InfoSection() {
 
         <DisclaimerDiv>
           <DisclaimerP>
-            This is not an official Race / Ride / Event in any capacity! It is an informal ride done along the same route made up of public trails and roads by a few of us every year that you are welcome to join entirely at your own risk as if you were riding it on your own.
-            
-            Those of who are riding this and arra
-            RIDE THIS AND ARRANGE THE DEPART DOES NOT ASSUME ANY RESPONSIBILITY
-            IN ANY WAY FOR ANY RIDER WHO CHOOSES TO RIDE THE ROUTE AT ANY TIME.
-            ENSURING YOUR OWN WELL BEING, MAKING SURE YOU ARE WELL PREPARED AND
-            AWARENESS OF THE INHERENT RISKS OF THIS UNDERTAKING (INCLUDING
-            INJURY AND DEATH) IS ENTIRELY YOUR OWN RESPONSIBILITY.
+          This is not an official race/ride/event in any capacity. It is an informal ride done along the same route made up of public trails and roads by a few of us every year that you are welcome to join entirely at your own risk as if you were riding it on your own.
+          </DisclaimerP>
+          <DisclaimerP>
+          This website was created for information purposes only. Those of us who ride this and arrange the grand depart, do not assume any responsibility in any way for any rider who chooses to ride the route at any time. Ensure your own well-being, make sure you are well prepared and aware of the inherent risks of this undertaking (Including injury and or death) is entirely your own responsibility. 
           </DisclaimerP>
         </DisclaimerDiv>
         <AboutWriteUp>

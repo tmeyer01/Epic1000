@@ -34,7 +34,7 @@ export const ImageH1 = styled.h1`
   text-align: center;
   padding-top: 20px;
   text-transform: uppercase;
-  
+
   @media screen and (max-width: 786px){
     font-size: 15px;
   }
@@ -46,14 +46,16 @@ export const ImageH1 = styled.h1`
 
 export const DisclaimerDiv = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 540px;
+  max-width: 860px;
   
   margin: 20px 20px;
   padding: 20px 20px;
   /* padding-bottom: 60px; */
   background: #4946f2;
+  border-radius: 15px;
 `
 
 export const DisclaimerP = styled.p`
@@ -62,17 +64,23 @@ export const DisclaimerP = styled.p`
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
+  word-wrap: break-word;
   /* text-transform: uppercase; */
-  margin-bottom: 16px;
+  margin:  6px 6px;
 `
 
 export const AboutWriteUp = styled.div`
-   display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 880px;
 `
 
 export  const AboutP = styled.p`
-  max-width: 440px;
-  margin-bottom: 35px;
+  /* max-width: 440px; */
+  margin:  6px 6px;
   font-size: 18px;
   line-height: 24px;
+  word-wrap: break-word;
 `
