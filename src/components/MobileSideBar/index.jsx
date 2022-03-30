@@ -1,5 +1,4 @@
-import React from 'react'
-// import { MenuItems } from '../DropDownMenu/DropDownMenuItems';
+
 import {
   SidebarContainer,
   Icon,
