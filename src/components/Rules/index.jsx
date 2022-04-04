@@ -7,6 +7,7 @@ import {
   RulesWriteUp,
   RulesP,
   RulesH3,
+  RulesH4,
   RulesList,
   RulesListItem
 } from './RulesElements'
@@ -29,19 +30,21 @@ function Rules() {
         </RulesH3>
 
         <RulesP>
-        Who: Any determined cyclist may challenge the Route at any time, in either direction, to qualify for the General Classification (GC) – GC standings will be maintained by myself for the time being – contact lmpret@gmail.com or message of the BC Epic 1000 Facebook page.
+        <RulesH4>Who:</RulesH4> Any determined cyclist may challenge the Route at any time, in either direction, to qualify for the General Classification (GC) – GC standings will be maintained by myself for the time being – contact lmpret@gmail.com or message of the BC Epic 1000 Facebook page.
         </RulesP>
 
         <RulesP>
-        When:  All summer long...however, an informal common start date known as the 'grand depart' will be take place on the last Saturday of June from the western end of the route.
+        <RulesH4>When: </RulesH4> All summer long...however, an informal common start date known as the 'grand depart' will be take place on the last Saturday of June from the western end of the route.
         </RulesP>
 
         <RulesP>
-        Spirit: Above all, attempts are intended to be solo / self-supported, self-timed, and observed as one stage, i.e. the clock runs non-stop. The challenge is complete upon arrival to the opposite end of the route  from start. There are no required checkpoints or designated rest periods on course. There is no finish time cut-off.
+          <RulesH4>Spirit:</RulesH4>
+        Above all, attempts are intended to be solo / self-supported, self-timed, and observed as one stage, i.e. the clock runs non-stop. The challenge is complete upon arrival to the opposite end of the route  from start. There are no required checkpoints or designated rest periods on course. There is no finish time cut-off.
         </RulesP>
 
         <RulesP>
-        Modus operandi: To complete the Route, a rider may resupply food / equipment, rent a room, launder clothing, even service their bike at commercial shops along the way. The intent is to ride unsupported between towns, and function self-supported when in towns. Any services utilized must always be commercially available to all challengers and not pre-arranged. No private resupply, no private lodging.
+        <RulesH4>Modus operandi:</RulesH4>
+         To complete the Route, a rider may resupply food / equipment, rent a room, launder clothing, even service their bike at commercial shops along the way. The intent is to ride unsupported between towns, and function self-supported when in towns. Any services utilized must always be commercially available to all challengers and not pre-arranged. No private resupply, no private lodging.
         </RulesP>
 
         <RulesP>
@@ -49,7 +52,8 @@ function Rules() {
         </RulesP>
 
         <RulesP>
-        Visitation: Bikepack racing is not intended to be a spectator sport! However, route-town locals only may interact with (i.e. visit briefly, cheer on) thru-racers as they pass through their locale. Out-of-town visitation to racers mid-race from challengers' family or friends is questionable – although the Tour Divide prohibits such encounters the BC Epic feels this is not necessarily a reason to relegate should such an encounter occur as long as no supplies or help of any sort whatsoever is provided to the rider.  
+        <RulesH4>Visitation:</RulesH4>
+         Bikepack racing is not intended to be a spectator sport! However, route-town locals only may interact with (i.e. visit briefly, cheer on) thru-racers as they pass through their locale. Out-of-town visitation to racers mid-race from challengers' family or friends is questionable – although the Tour Divide prohibits such encounters the BC Epic feels this is not necessarily a reason to relegate should such an encounter occur as long as no supplies or help of any sort whatsoever is provided to the rider.  
         </RulesP>
 
         <RulesP>
@@ -83,7 +87,8 @@ function Rules() {
         </RulesP>
 
         <RulesP>
-        Relegation: BC Epic 1000 reserves the right to relegate a rider from the General Classification (GC) for confirmed rules violations.
+        <RulesH4>Relegation:</RulesH4>
+        BC Epic 1000 reserves the right to relegate a rider from the General Classification (GC) for confirmed rules violations.
         </RulesP>
 
         <RulesP>

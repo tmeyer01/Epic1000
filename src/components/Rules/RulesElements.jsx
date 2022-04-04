@@ -35,7 +35,7 @@ export const ImageH1 = styled.h1`
   text-transform: uppercase;
 
   @media screen and (max-width: 786px){
-    font-size: 15px;
+    font-size: 35px;
   }
 
   @media screen and (max-width: 480px){
@@ -54,18 +54,39 @@ export const RulesWriteUp = styled.div`
   margin: 50px 20px;
   padding: 20px 20px;
 
+
+  @media screen and (max-width: 786px){
+    width: 100%;
+  }
+
+  @media screen and (max-width: 480px){
+    font-size: 20px;
+  }
 `
 
 export const RulesP = styled.p`
-  margin:  6px 6px;
+  margin:  16px 6px;
   font-size: 18px;
   line-height: 26px;
   word-wrap: break-word;
+  
+  @media screen and (max-width: 786px){
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 480px){
+    font-size: 20px;
+  }
 `
 
 export const RulesH3 = styled.h3`
-    font-size: 54px;
-  font-weight: bold;
+    font-size: 23px;
+    font-weight: bold;
+    margin-top:20px;
+`
+export const RulesH4 = styled.h3`
+    font-size: 20px;
+    font-weight: bold;
 `
 
 export const RulesList = styled.ul`
@@ -73,5 +94,6 @@ export const RulesList = styled.ul`
 `
 export const RulesListItem = styled.li`
   list-style-type: none;
-  
+  padding-top:8px;
+  margin: 10px 10px;
 `
