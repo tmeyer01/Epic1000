@@ -84,7 +84,7 @@ const Navbar = ({isOpen, toggle}) => {
           
           <NavMenu>
             <NavItem>
-              <NavLinks to="/about">About</NavLinks>
+              <NavLinks to="/About">About</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="/Route">Route</NavLinks>
