@@ -4,6 +4,7 @@ import MobileSideBar from '../src/components/MobileSideBar'
 import Nav from '../src/components/Navbar'
 import Home from "./pages/";
 import About from "./pages/About";
+import Rules from "./pages/Rules"
 import "./App.css";
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
+          <Route path="/Rules" element={<Rules/>} />
         </Routes>
       </BrowserRouter>
     </main>
