@@ -64,12 +64,14 @@ export const RulesP = styled.p`
 `
 
 export const RulesH3 = styled.h3`
-  
+    font-size: 54px;
+  font-weight: bold;
 `
 
 export const RulesList = styled.ul`
   list-style: none;
 `
-export const RulesLIstItem = styled.li`
+export const RulesListItem = styled.li`
+  list-style-type: none;
   
 `
