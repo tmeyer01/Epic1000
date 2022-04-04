@@ -33,7 +33,10 @@ function InfoSection() {
             style and under the same rules. No registration, no support, no
             insurance, no prizes - those who choose to simply meet up for an
             informal group ride along a plotted route on public trails open to
-            all at a suggest a time.. You show up and ride at your own risk. The
+            all at a suggest a time.. You show up and ride at your own risk. 
+            </AboutP>  
+            <AboutP>
+            The
             BC Epic is a 1000km (1066 to be exact), 11 600m elevation traverse
             across South Central BC starting in Merritt and ending in Fernie (or
             vice versa if you choose) mostly along the Trans Canada Trail. The

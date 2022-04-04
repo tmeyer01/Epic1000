@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import banner from "../../images/about.jpeg"
 
 export const AboutContainer = styled.div`
-  background: #fff;
+  background: #e1dede;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +51,7 @@ export const DisclaimerDiv = styled.div`
   align-items: center;
   max-width: 860px;
   
-  margin: 20px 20px;
+  margin-top: 60px;
   padding: 20px 20px;
   /* padding-bottom: 60px; */
   background: #4946f2;
@@ -70,17 +70,21 @@ export const DisclaimerP = styled.p`
 `
 
 export const AboutWriteUp = styled.div`
+  background: #fff;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 880px;
+  width: 860px;
+  margin: 50px 20px;
+  padding: 20px 20px;
 `
 
 export  const AboutP = styled.p`
   /* max-width: 440px; */
   margin:  6px 6px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 26px;
   word-wrap: break-word;
 `
