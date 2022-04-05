@@ -10,6 +10,7 @@ import "./App.css";
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);
+  
   const [size, setSize] = useState({
     width: undefined,
     height: undefined,
@@ -31,25 +32,18 @@ function App() {
 
   useEffect(() => {
     if (size.width > 980 && isOpen) {
-        setIsOpen(false);
+        setIsOpen((prev) => !prev);
     }
   }, [size.width, isOpen]);
 
   const toggle = () => {
-    setIsOpen((prevOpen) => !prevOpen)
+     setIsOpen((prevOpen) => !prevOpen)
   };
-
-
-
-
-
-
-
 
   return (
     <main>
       <BrowserRouter>
-        <MobileSideBar isOpen={isOpen} toggle={toggle}/>
+        <MobileSideBar toggle={toggle} isOpen={isOpen}/>
         <Nav toggle={toggle} isOpen={isOpen}/>
         <Routes>
           <Route path="/" element={<Home />} />
