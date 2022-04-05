@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 import banner from "../../images/about.jpeg"
+import topo from '../../images/topoBackground.jpg'
 
 export const AboutContainer = styled.div`
-  background: #e1dede;
+ background:url(${topo});
+  /* background: #e1dede; */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center bottom; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,12 +84,30 @@ export const AboutWriteUp = styled.div`
   width: 860px;
   margin: 50px 20px;
   padding: 20px 20px;
+
+
+  @media screen and (max-width: 786px){
+    width: 100%;
+  }
+
+  @media screen and (max-width: 480px){
+    font-size: 20px;
+  }
 `
 
 export  const AboutP = styled.p`
   /* max-width: 440px; */
   margin:  6px 6px;
+  padding: 10px;
   font-size: 18px;
   line-height: 26px;
   word-wrap: break-word;
+
+  @media screen and (max-width: 786px){
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 480px){
+    font-size: 20px;
+  }
 `
