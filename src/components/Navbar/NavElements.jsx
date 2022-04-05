@@ -141,12 +141,14 @@ export const NavNonLink = styled.div`
   height: 100%;
   cursor: pointer;
 
+
   &:active {
     border-bottom: 3px solid #fff;
+  
   }
   &:hover {
     border-bottom: 3px solid #fff;
-    background: ${({scrollNav}) => (scrollNav ?  'transparent' : '#000')};
+    background: ${({moreDropDown}) => (moreDropDown ?  'transparent' : '#000')};
   }
 
   span{

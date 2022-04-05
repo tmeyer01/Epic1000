@@ -9,6 +9,9 @@ import { FaBars, FaTimes } from "react-icons/fa";
 // import {FaTimes} from 'react-icons/fa'
 import Dropdown from "../DropDownMenu";
 
+import { MenuItems } from '../DropDownMenu/DropDownMenuItems';
+import { RouteItems } from '../DropDownMenu/DropDownRouteItems'
+
 import {
   Nav,
   NavBarContainer,
@@ -26,7 +29,7 @@ const Navbar = ({isOpen, toggle}) => {
  
 
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [moreDropDown, setMoreDropDown] = useState(false);
 
   const handleClick = () => {
     setClick((prevClick) => !prevClick);
@@ -34,24 +37,25 @@ const Navbar = ({isOpen, toggle}) => {
 
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {  
+  const onMouseEnterMore = () => {  
     if (window.innerWidth < 960) {
-      setDropdown(false);
+      setMoreDropDown(false);
     } else {
-      setDropdown(true);
+      setMoreDropDown(true);
     }
   };
 
-  const onMouseLeave = () => {
+  const onMouseLeaveMore = () => {
     if (window.innerWidth < 960) {
-      setDropdown(false);
+      setMoreDropDown(false);
     } else {
-      setDropdown(false);
+      setMoreDropDown(false);
     }
   };
 
   const [scrollNav, setScrollNav] = useState(false);
 
+  
   const changeNav = () => {
     if(window.scrollY >= 80) {
       setScrollNav(true)
@@ -69,7 +73,7 @@ const Navbar = ({isOpen, toggle}) => {
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav scrollNav={scrollNav}>
+        <Nav scrollNav={scrollNav} isOpen={isOpen}>
           <NavBarContainer>
           <NavLogo to="/">
             BC EPIC 1000
@@ -87,7 +91,10 @@ const Navbar = ({isOpen, toggle}) => {
               <NavLinks to="/About">About</NavLinks>
             </NavItem>
             <NavItem>
+            {/* <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> */}
               <NavLinks to="/Route">Route</NavLinks>
+              {/* <BsFillCaretDownFill /> */}
+              {/* {dropdown && <Dropdown menuItems={RouteItems}/>} */}
             </NavItem>
             <NavItem>
               <NavLinks to="/Rules">Rules</NavLinks>
@@ -98,12 +105,12 @@ const Navbar = ({isOpen, toggle}) => {
             <NavItem>
               <NavLinks to="/Forum">Forum</NavLinks>
             </NavItem>
-            <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+            <NavItem onMouseEnter={onMouseEnterMore} onMouseLeave={onMouseLeaveMore}>
               <NavNonLink onClick={closeMobileMenu}>
                <span >More</span> 
                 <BsFillCaretDownFill />
               </NavNonLink>
-              {dropdown && <Dropdown />}
+              {moreDropDown && <Dropdown menuItems={MenuItems}/>}
             </NavItem>
             
             <NavItem>
