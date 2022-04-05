@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { DropDownMenu, DropListItem, DropLink } from './DropDownElements';
-import { MenuItems } from './DropDownMenuItems';
+// import { MenuItems } from './DropDownMenuItems';
 
-function DropDown() {
+function DropDown({menuItems}) {
   
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
-    // console.log("clicked")
     setIsOpen((prevOpen) => !prevOpen)
   }
 
@@ -15,13 +14,12 @@ function DropDown() {
 <>
 
     <DropDownMenu isOpen={isOpen} toggle={toggle}>
-    {MenuItems.map((item, index) => {
+    {menuItems.map((item, index) => {
       return (
         <DropListItem key={index}>
           <DropLink
             id={item.cName}
             to={item.path}
-            onClick={toggle}
           >
             {item.title}
           </DropLink>
@@ -31,15 +29,7 @@ function DropDown() {
 
     </DropDownMenu>
 </>
-    // <div>
-    //   <ul>
-    //     <li>general classification</li>
-    //     <li>Links</li>
-    //     <li>Gallery</li>
-    //     <li>Video</li>
-    //     <li>Contact</li>
-    //   </ul>
-    // </div>
+
   )
 }
 
