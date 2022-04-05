@@ -11,17 +11,18 @@ export const SidebarContainer = styled.div`
   background-color: #0d0d0d;
   display: grid;
   align-items: center;
-  top:80px;
+  top:0px;
   left:0;
   transition: 1.2s ease-in-out;
   opacity:${({isOpen}) => (isOpen ? '100%' : '0')};
-  top: ${({isOpen}) => (isOpen ? '0' : '-100%')};;
+  top: ${({isOpen}) => (isOpen ? '80px' : '-100%')};;
   /* opacity: ${({isOpen}) => (isOpen ? '100%' : '0')}; 
   top: ${({isOpen}) => (isOpen ? '0' : '-100%')};  */
 `
 
 export const CloseIcon = styled(FaTimes)`
-  color: #fff
+  color: #fff;
+  display:none;
 `;
 
 export const Icon = styled.div`
