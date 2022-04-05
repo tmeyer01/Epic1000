@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import banner from "../../images/R2rules.jpeg"
+import topo from '../../images/topoBackground.jpg'
 
 export const RulesContainer = styled.div`
-  background: #e1dede;
+  /* background: #e1dede; */
+  background:url(${topo});
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center bottom; 
   display: flex;
   flex-direction: column;
   justify-content: center;
