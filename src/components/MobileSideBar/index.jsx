@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import {
   SidebarContainer,
@@ -20,7 +20,7 @@ function MobileSideBar({isOpen, toggle}) {
   // function toggle() {
   //   setNavOpen(prev => !prev);
   // }
-  console.log("isOpen", isOpen)
+  //console.log("isOpen", isOpen)
   // console.log("toggle", toggle)
   
   return (
@@ -31,6 +31,7 @@ function MobileSideBar({isOpen, toggle}) {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink to="/About" onClick={toggle}>About</SidebarLink>
+          <SidebarLink to="/Route" onClick={toggle}>Route</SidebarLink>
           <SidebarLink to="/Rules" onClick={toggle}>Rules</SidebarLink>
           <SidebarLink to="/Register" onClick={toggle}>Register</SidebarLink>
           <SidebarLink to="/Forum" onClick={toggle}>Forum</SidebarLink>
