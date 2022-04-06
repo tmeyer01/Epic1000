@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { GiMountainRoad } from "react-icons/gi";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
-import logo from '../../images/logoWithWhiteOutline.png'
+// import logo from '../../images/logoWithWhiteOutline.png'
 import { FaBars, FaTimes } from "react-icons/fa";
 // import {FaTimes} from 'react-icons/fa'
 import Dropdown from "../DropDownMenu";
@@ -16,7 +16,7 @@ import {
   Nav,
   NavBarContainer,
   NavLogo,
-  NavLogoImg,
+ 
   MobileIcon,
   NavMenu,
   NavItem,
@@ -31,9 +31,9 @@ const Navbar = ({isOpen, toggle}) => {
   const [click, setClick] = useState(false);
   const [moreDropDown, setMoreDropDown] = useState(false);
 
-  const handleClick = () => {
-    setClick((prevClick) => !prevClick);
-  };
+  // const handleClick = () => {
+  //   setClick((prevClick) => !prevClick);
+  // };
 
   const closeMobileMenu = () => setClick(false);
 
