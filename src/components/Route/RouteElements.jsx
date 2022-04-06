@@ -52,6 +52,7 @@ export const ImageH1 = styled.h1`
 
 export const CarrouselContainer = styled.div`
   background-color: #fff ;
+  border-radius: 15px;
   margin: 40px 40px;
   padding: 20px 20px;
   width: 800px;
@@ -64,6 +65,15 @@ export const CarrouselContainer = styled.div`
     width: 250px
   }
 
+`
+export const CarrouselH1 = styled.div`
+  font-size: 33px;
+  font-weight: bold;
+  width: 100%;
+  /* margin-top:20px; */
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 `
 
 
