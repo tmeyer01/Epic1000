@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { RouteItems } from './RouteItems';
-import {RouteContainer, RouteImageContainer, ImageH1, CarrouselContainer, Card, Gradient} from './RouteElements'
+import {RouteContainer, RouteImageContainer, ImageH1, CarrouselContainer, CarrouselH1, Card, Gradient} from './RouteElements'
 
 function Route() {
   return (
@@ -17,7 +17,7 @@ function Route() {
     {/* <MapsTitle>Maps</MapsTitle> */}
 
 <CarrouselContainer>
-
+ <CarrouselH1>MAPS</CarrouselH1>
     <Splide
           options={{
             perPage: 3,
@@ -32,7 +32,7 @@ function Route() {
 {RouteItems.map((item) => {
             return (
               <SplideSlide key={item.id}>
-                <Link to={"/route/" + item.id}>
+                <Link to={"/map/" + item.id} >
                   <Card>
                     <p>{item.title}</p>
                     <img 
