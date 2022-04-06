@@ -1,16 +1,19 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
 import {useState, useEffect } from 'react';
 import MobileSideBar from '../src/components/MobileSideBar'
 import Nav from '../src/components/Navbar'
-import Home from "./pages/";
-import About from "./pages/About";
-import Rules from "./pages/Rules";
-import RoutePage from "./pages/Route";
+// import Home from "./pages/";
+// import About from "./pages/About";
+// import Rules from "./pages/Rules";
+// import RoutePage from "./pages/Route";
+import Pages from './pages/Pages'
+import Footer from './components/Footer'
 import "./App.css";
 
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);
+  
   
   const [size, setSize] = useState({
     width: undefined,
@@ -41,17 +44,21 @@ function App() {
      setIsOpen((prevOpen) => !prevOpen)
   };
 
+ 
+
   return (
     <main>
       <BrowserRouter>
         <MobileSideBar toggle={toggle} isOpen={isOpen}/>
         <Nav toggle={toggle} isOpen={isOpen}/>
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Rules" element={<Rules/>} />
           <Route path="/Route" element={<RoutePage/>} />
-        </Routes>
+        </Routes> */}
+        <Pages />
+        <Footer/>
       </BrowserRouter>
     </main>
   );
