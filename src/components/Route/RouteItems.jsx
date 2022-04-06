@@ -1,4 +1,4 @@
-import fullRouteThmb from '../../images/topoBackground.jpg'
+//import fullRouteThmb from '../../images/topoBackground.jpg'
 import fullMap from '../../images/MapThumbs/FullMap.png'
 import merritToPenticton from '../../images/MapThumbs/MerritToPenticton.png'
 import pentictonToMidway from '../../images/MapThumbs/PentictonToMidway.png'
