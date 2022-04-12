@@ -53,7 +53,8 @@ export const ImageH1 = styled.h1`
 export const CarrouselContainer = styled.div`
   background-color: #fff ;
   border-radius: 15px;
-  margin: 40px 40px;
+  /* margin: 40px 40px; */
+  margin-top: 40px;
   padding: 20px 20px;
   width: 800px;
 
@@ -129,3 +130,41 @@ export const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
 `;
+
+export const MapShowButton = styled.button`
+  color:black;
+  width: 100%;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+`
+
+
+export const MapWrapper = styled.div`
+
+  width: 800px;
+  height: 800px; 
+  background: blue;
+  display: flex;
+  /* display: ${({showMap}) => (showMap ? 'flex' : 'none')}; */
+  justify-content: center;
+  align-items: center;
+
+
+`
+
+export const MapContainer = styled.div`
+  /* top: 80px; */
+  margin: 100px 60px;
+  width: 800px;
+`
+
+
+export const TheMap = styled.iframe`
+  height: 700px;
+  width: 1px;
+  min-width: 100%;
+  border: none;
+  
+
+`
