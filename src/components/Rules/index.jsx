@@ -16,9 +16,7 @@ function Rules() {
   return (
     <>
     <RulesContainer>
-      <RulesImageContainer>
-        <ImageH1>Rules</ImageH1>
-      </RulesImageContainer>
+     
       <RulesWriteUp>
         
         <RulesP>

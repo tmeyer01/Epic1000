@@ -1,7 +1,8 @@
 import React from "react";
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useMemo} from 'react';
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { RouteItems } from "./RouteItems";
@@ -19,6 +20,7 @@ import {
   TheMap
 } from "./RouteElements";
 
+
 function Route() {
  
   
@@ -27,48 +29,65 @@ function Route() {
  
   const [cardValue, setCardValue] = useState([])
 
-  const results = RouteItems.filter((item) => item === cardValue);
+  // const results = RouteItems.filter((item) => item === cardValue);
 
 
+  const results2 = (data, value) => {
+    return data.filter((item) => item === value)
+  }
 
-
+  const shownMap = useMemo(()=> {
+    return results2(RouteItems, cardValue)
+  }, [cardValue])
 
   
   // console.log(results)
   
   const displayMapWindow = (value) => {
+    console.log('Card Id', cardValue)
+    setIsMapShown((prev) => !prev)
        
+
+
     // console.log("Show map", showMap)
     console.log("Value", value)
     // setCardValue(value.title)
     setCardValue(value)
     
     
-    console.log('Card Id', cardValue)
-    setIsMapShown((prev) => !prev)
    
   }
 
-  
-  const addCardId = (id) => {
-    console.log("The Id is", id)
-    setCardValue(id)
-
-  }
 
 
- 
+
+
+const showMenu = {
+  enter: {
+    opacity: 1,
+    y: 0,
+    display: "block",
+  },
+  exit: {
+    y: -5,
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+    },
+    transitionEnd: {
+      display: "none",
+    },
+  },
+};
  
   return (
     <>
       <RouteContainer>
-        <RouteImageContainer>
-          <ImageH1>Route</ImageH1>
-        </RouteImageContainer>
+    
 
         {/* <MapsTitle>Maps</MapsTitle> */}
 
-        <CarrouselContainer>
+        <CarrouselContainer isMapShown={isMapShown}>
           <CarrouselH1>MAPS</CarrouselH1>
           <Splide
             options={{
@@ -101,9 +120,18 @@ function Route() {
        
        
 
-       {isMapShown && <MapWrapper>
+       {isMapShown && 
+        <motion.div
+        initial="exit"
+        animate={isMapShown ? "enter" : "exit"}
+        variants={showMenu}
+        >
+       
+       <MapWrapper>
         {/* <MapWrapper showMap={showMap}> */}
-          {results.map((item) => {
+          
+         
+          {shownMap.map((item) => {
           return (
             <MapContainer key={item.id}>
               {/* <p>{item.title}</p> */}
@@ -112,7 +140,8 @@ function Route() {
           );
         })}
 
-        </MapWrapper> }
+        </MapWrapper> 
+        </motion.div>}
 
       </RouteContainer>
     </>

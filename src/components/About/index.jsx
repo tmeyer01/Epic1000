@@ -14,9 +14,6 @@ function InfoSection() {
   return (
     <>
       <AboutContainer>
-        <AboutImageContainer>
-          <ImageH1>About</ImageH1>
-        </AboutImageContainer>
 
         <DisclaimerDiv>
           <DisclaimerP>

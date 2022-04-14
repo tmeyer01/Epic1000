@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import banner from "../../images/route.jpeg"
 import topo from '../../images/topoBackground.jpg'
-
+import topoDark from '../../images/topoBackground2.jpg'
+import { motion } from "framer-motion";
 
 export const RouteContainer = styled.div`
  background:url(${topo});
@@ -20,39 +21,14 @@ export const RouteContainer = styled.div`
   z-index: 1;    
 `
 
-export const RouteImageContainer = styled.div`
-   background:url(${banner});
-  width: 100%;
-  height: 700px;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center bottom; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-export const ImageH1 = styled.h1`
-  color: #fff;
-  text-shadow: 2px 2px 10px #0e0d0d;
-  font-size: 40px;
-  text-align: center;
-  padding-top: 20px;
-  text-transform: uppercase;
-
-  @media screen and (max-width: 786px){
-    font-size: 15px;
-  }
-
-  @media screen and (max-width: 480px){
-    font-size: 20px;
-  }
-`
 
 
 export const CarrouselContainer = styled.div`
-  background-color: #fff ;
-  border-radius: 15px;
+  background:url(${topoDark});
+  color: #fff;
+  text-shadow: 2px 2px 10px #0e0d0d;
+  /* border-radius: 15px; */
+  border-radius:${({isMapShown}) => (isMapShown ? '15px 15px 0px 0px' : '15px')};
   /* margin: 40px 40px; */
   margin-top: 40px;
   padding: 20px 20px;
@@ -144,11 +120,13 @@ export const MapWrapper = styled.div`
 
   width: 800px;
   height: 800px; 
-  background: blue;
+  border-radius: 0px 0px 15px 15px;
+  background:url(${topoDark});
   display: flex;
   /* display: ${({showMap}) => (showMap ? 'flex' : 'none')}; */
   justify-content: center;
   align-items: center;
+ 
 
 
 `

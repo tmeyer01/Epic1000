@@ -1,11 +1,13 @@
 import React from 'react'
 import Rules from '../components/Rules'
-// import Footer from '../components/Footer'
+import Header from '../components/Header'
+import { headerRules } from '../data/headerData'
 
 
 function RulesPage() {
   return (
    <>
+  <Header {...headerRules}/>
    <Rules/>
    {/* <Footer/> */}
    </>
