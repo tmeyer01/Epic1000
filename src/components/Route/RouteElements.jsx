@@ -27,15 +27,16 @@ export const CarrouselContainer = styled.div`
   background:url(${topoDark});
   color: #fff;
   text-shadow: 2px 2px 10px #0e0d0d;
-  /* border-radius: 15px; */
+ 
   border-radius:${({isMapShown}) => (isMapShown ? '15px 15px 0px 0px' : '15px')};
-  /* margin: 40px 40px; */
+ 
   margin-top: 40px;
   padding: 20px 20px;
+  margin-bottom:${({isMapShown}) => (isMapShown ? '0px' : '30px')} ;
   width: 800px;
 
   @media screen and (max-width: 786px){
-   width: 450px
+   width: 100%
   }
 
   @media screen and (max-width: 480px){
@@ -126,6 +127,7 @@ export const MapWrapper = styled.div`
   /* display: ${({showMap}) => (showMap ? 'flex' : 'none')}; */
   justify-content: center;
   align-items: center;
+  margin-bottom:${({isMapShown}) => (isMapShown ? '100px' : '0px')} ;
  
 
 

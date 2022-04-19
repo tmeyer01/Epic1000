@@ -127,7 +127,7 @@ const showMenu = {
         variants={showMenu}
         >
        
-       <MapWrapper>
+       <MapWrapper isMapShown={isMapShown}>
         {/* <MapWrapper showMap={showMap}> */}
           
          

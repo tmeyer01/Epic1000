@@ -15,7 +15,7 @@ export const SidebarContainer = styled.div`
   left:0;
   transition: 1.2s ease-in-out;
   opacity:${({isOpen}) => (isOpen ? '100%' : '0')};
-  top: ${({isOpen}) => (isOpen ? '80px' : '-100%')};;
+  top: ${({isOpen}) => (isOpen ? '0px' : '-100%')};;
   /* opacity: ${({isOpen}) => (isOpen ? '100%' : '0')}; 
   top: ${({isOpen}) => (isOpen ? '0' : '-100%')};  */
 `
