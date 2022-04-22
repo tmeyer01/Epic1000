@@ -5,7 +5,7 @@ function IntelSection() {
     <>
     <IntelContainer>
       <IntelWrapper>
-        <
+        
       </IntelWrapper>
     </IntelContainer>
     </>
