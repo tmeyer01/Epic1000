@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import banner from "../../images/about.jpeg"
 import topo from '../../images/topoBackground.jpg'
+import topoDark from '../../images/topoBackground2.jpg'
 
 export const AboutContainer = styled.div`
  background:url(${topo});
@@ -31,14 +32,15 @@ export const DisclaimerDiv = styled.div`
   margin-top: 60px;
   padding: 20px 20px;
   /* padding-bottom: 60px; */
-  background: #4946f2;
+  background:url(${topoDark});
+  /* background: #4946f2; */
   border-radius: 15px;
 `
 
 export const DisclaimerP = styled.p`
   color: #fff;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 26px;
   font-weight: 700;
   letter-spacing: 1.4px;
   word-wrap: break-word;
