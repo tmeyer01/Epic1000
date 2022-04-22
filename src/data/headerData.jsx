@@ -14,3 +14,8 @@ export const headerRules = {
   bgImage: require('../images/R2rules.jpeg')
 
 }
+
+export const headerRegister = {
+  title: 'Register',
+  bgImage: require('../images/register.png')
+}
