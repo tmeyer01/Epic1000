@@ -127,7 +127,7 @@ export const MapWrapper = styled.div`
   /* display: ${({showMap}) => (showMap ? 'flex' : 'none')}; */
   justify-content: center;
   align-items: center;
-  margin-bottom:${({isMapShown}) => (isMapShown ? '100px' : '0px')} ;
+  margin-bottom:${({isMapShown}) => (isMapShown ? '50px' : '0px')} ;
  
 
 

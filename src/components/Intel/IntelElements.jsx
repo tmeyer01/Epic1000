@@ -10,6 +10,7 @@ export const IntelContainer = styled.div`
   align-items: center;
   background:url(${topoDark});
   margin-top: 30px;
+  margin-bottom: 60px;
   width: 800px;
   border-radius: 15px;
 

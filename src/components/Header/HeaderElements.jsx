@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.div`
   background:${({bgImage}) => (bgImage ? `url(${bgImage})` : `#fff`)};
   width: 100%;
-  height: 700px;
+  height: 600px;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center bottom; 
+  background-position:  left bottom; 
   display: flex;
   justify-content: center;
   align-items: center;

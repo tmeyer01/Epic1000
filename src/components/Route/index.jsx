@@ -69,7 +69,7 @@ function Route() {
     <>
 
       <RouteContainer>
-        <Intel/>
+        
         {/* <MapsTitle>Maps</MapsTitle> */}
 
         <CarrouselContainer isMapShown={isMapShown}>
@@ -127,6 +127,9 @@ function Route() {
             </MapWrapper>
           </motion.div>
         )}
+
+
+      <Intel/>
       </RouteContainer>
     </>
   );
