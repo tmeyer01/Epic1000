@@ -19,6 +19,8 @@ import {
   TheMap,
 } from "./RouteElements";
 
+import Intel from '../Intel'
+
 function Route() {
   const [isMapShown, setIsMapShown] = useState(false);
   const [cardValue, setCardValue] = useState([]);
@@ -65,7 +67,9 @@ function Route() {
 
   return (
     <>
+
       <RouteContainer>
+        <Intel/>
         {/* <MapsTitle>Maps</MapsTitle> */}
 
         <CarrouselContainer isMapShown={isMapShown}>

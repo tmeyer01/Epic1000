@@ -17,7 +17,7 @@ import {
   Nav,
   NavBarContainer,
   NavLogo,
-  ActiveLink,
+
   MobileIcon,
   NavMenu,
   NavItem,
@@ -100,7 +100,7 @@ const Navbar = ({ isOpen, toggle }) => {
               >
                 <NavNonLink onClick={closeMobileMenu}>
                   <span>More</span>
-                  <BsFillCaretDownFill />
+                   <BsFillCaretDownFill />
                 </NavNonLink>
                 {moreDropDown && <Dropdown menuItems={MenuItems} />}
               </NavItem>

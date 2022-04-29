@@ -7,7 +7,7 @@ function IntelSection() {
   return (
     <>
       <IntelContainer>
-        <IntelH1>Section Intel</IntelH1>
+        <IntelH1>Intel</IntelH1>
         <List>
           
           <Link to={"/intel/okanaganSec"}>

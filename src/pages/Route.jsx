@@ -10,7 +10,7 @@ function RulesPage() {
   return (
    <>
    <Header{...headerRoute}/>
-   <Intel/>
+   {/* <Intel/> */}
    <Route/>
    {/* <Footer/> */}
    </>
