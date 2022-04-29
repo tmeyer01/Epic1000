@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export const Nav = styled.nav`
   //background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
@@ -41,7 +41,7 @@ export const NavBarContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(NavLink)`
   color: #fff;
   justify-self: start;
   align-items: center;
@@ -107,10 +107,10 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
-  
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 `;
 
-export const NavLinks = styled(Link)`
+export const NavLinks = styled(NavLink)`
   color: #fff;
   display: flex;
   align-items: center;
@@ -118,9 +118,12 @@ export const NavLinks = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  
+ 
 
-  &:active {
+  &.active {
     border-bottom: 3px solid #fff;
+    
   }
   &:hover {
     border-bottom: 3px solid #fff;
@@ -132,6 +135,8 @@ export const NavLinks = styled(Link)`
  
 `;
 
+
+
 export const NavNonLink = styled.div`
   color: #fff;
   display: flex;
@@ -140,7 +145,7 @@ export const NavNonLink = styled.div`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
   &:active {
     border-bottom: 3px solid #fff;
