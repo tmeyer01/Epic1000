@@ -1,18 +1,30 @@
 import React from "react";
 import {
   OkanaganContainer,
+  ControlContainer,
   SectionTitle,
   SectionDiscription,
   SectionWriteUp,
   SectionP
 
 } from "./OkanaganElements"
+import { FaBars, FaTimes } from "react-icons/fa";
 
 
-function index() {
+function index( {toggleOk, isOkanaganSecOpen} ) {
+
+  console.log("THIS IS IT", toggleOk)
+  console.log("IS IT OPEN ", isOkanaganSecOpen)
+
   return (
     <>
       <OkanaganContainer>
+        
+        <ControlContainer onClick={toggleOk}>
+        {isOkanaganSecOpen ? <FaTimes /> : <FaBars /> }  
+
+        </ControlContainer>
+
         <SectionDiscription>
         <SectionTitle> Okanagan Section</SectionTitle>
           This section of the route covers the area from Brookmere, south of
