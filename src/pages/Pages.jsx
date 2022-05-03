@@ -10,7 +10,7 @@ import RegisterPage from './Register';
 import Map from './Map';
 import IntelPopUp from './Intel';
 
-function Pages() {
+function Pages({toggleOk, isIsOkanaganSecOpen}) {
   const location = useLocation()
  
  
