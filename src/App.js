@@ -2,6 +2,9 @@ import { BrowserRouter} from "react-router-dom";
 import {useState, useEffect } from 'react';
 import MobileSideBar from '../src/components/MobileSideBar'
 import Nav from '../src/components/Navbar'
+
+import Okanagan from '../src/components/Okanagan'
+
 // import Home from "./pages/";
 // import About from "./pages/About";
 // import Rules from "./pages/Rules";
@@ -44,6 +47,13 @@ function App() {
      setIsOpen((prevOpen) => !prevOpen)
   };
 
+
+//   const [isIsOkanaganSecOpen, setIsOkanaganSecOpen] = useState(false);
+  
+//   const toggleOk = () => {
+//     setIsOkanaganSecOpen((prevOpen) => !prevOpen)
+//  };
+
  
 
   return (
@@ -57,7 +67,7 @@ function App() {
           <Route path="/Rules" element={<Rules/>} />
           <Route path="/Route" element={<RoutePage/>} />
         </Routes> */}
-        <Pages toggle={toggle} isOpen={isOpen}/>
+        <Pages />
         <Footer/>
       </BrowserRouter>
     </main>
