@@ -10,9 +10,20 @@ export const OkanaganContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 998;
 `;
+
+export const ControlContainer = styled.div`
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60%);
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #000000;
+`
 
 export const SectionTitle = styled.h1`
   /* top:80; */
