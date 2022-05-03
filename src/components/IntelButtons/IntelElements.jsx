@@ -27,7 +27,7 @@ export const List = styled.div`
   /* margin: 2rem 0rem; */
 `;
 
-export const Link = styled(NavLink)`
+export const Link = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

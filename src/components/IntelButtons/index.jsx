@@ -1,16 +1,25 @@
-import React from "react";
+import {useState, useEffect } from 'react';
 import { GrMap } from "react-icons/gr";
 import {IntelContainer, IntelH1, List, Link} from './IntelElements'
-
+import Okanagan from '../Okanagan'
 
 function IntelSection() {
+  
+  const [isOkanaganSecOpen, setIsOkanaganSecOpen] = useState(false);
+  
+  const toggleOk = () => {
+    console.log('clicked')
+    setIsOkanaganSecOpen((prevOpen) => !prevOpen)
+ };
+  
+  
   return (
     <>
       <IntelContainer>
         <IntelH1>Intel</IntelH1>
         <List>
           
-          <Link to={"/intel/okanaganSec"}>
+          <Link onClick={toggleOk}>
             <GrMap />
             <h4>Okanagan</h4>
           </Link>
@@ -28,6 +37,9 @@ function IntelSection() {
           </Link>
         </List>
       </IntelContainer>
+
+
+      {isOkanaganSecOpen && <Okanagan toggleOk={toggleOk} isOkanaganSecOpen={isOkanaganSecOpen}/>}
     </>
   );
 }
