@@ -19,13 +19,12 @@ import {
   TheMap,
 } from "./RouteElements";
 
-import Intel from '../Intel'
+import Intel from '../IntelButtons'
 
 function Route() {
   const [isMapShown, setIsMapShown] = useState(false);
   const [cardValue, setCardValue] = useState([]);
 
-  // const results = RouteItems.filter((item) => item === cardValue);
 
   const results2 = (data, value) => {
     return data.filter((item) => item === value);
@@ -130,6 +129,7 @@ function Route() {
 
 
       <Intel/>
+
       </RouteContainer>
     </>
   );

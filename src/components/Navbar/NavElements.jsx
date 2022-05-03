@@ -43,6 +43,7 @@ export const NavBarContainer = styled.div`
 
 export const NavLogo = styled(NavLink)`
   color: #fff;
+ 
   justify-self: start;
   align-items: center;
   justify-content: center;

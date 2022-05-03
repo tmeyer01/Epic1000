@@ -70,11 +70,11 @@ const Navbar = ({ isOpen, toggle }) => {
             <NavLogo to="/">
               BC EPIC 1000
               <GiMountainRoad />
-              {/* <NavLogoImg alt="logo"  src={logo}/> */}
+             
             </NavLogo>
 
             <MobileIcon onClick={toggle}>
-              {/* <FaBars /> */}
+             
               {isOpen ? <FaTimes /> : <FaBars />}
             </MobileIcon>
 

@@ -8,6 +8,7 @@ import RoutePage from "./Route";
 import Rules from "./Rules";
 import RegisterPage from './Register';
 import Map from './Map';
+import IntelPopUp from './Intel';
 
 function Pages() {
   const location = useLocation()
@@ -22,7 +23,8 @@ function Pages() {
           <Route path="/Rules" element={<Rules/>} />
           <Route path="/Route" element={<RoutePage/>} />
           <Route path='/Register' element={<RegisterPage/>} />
-          <Route path='/map/:name' element={<Map/>} />
+          {/* <Route path='/map/:name' element={<Map/>} /> */}
+          <Route path='/intel/:type' element={<IntelPopUp/>} />
       </Routes>
 
     </AnimatePresence>

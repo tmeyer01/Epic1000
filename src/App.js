@@ -57,7 +57,7 @@ function App() {
           <Route path="/Rules" element={<Rules/>} />
           <Route path="/Route" element={<RoutePage/>} />
         </Routes> */}
-        <Pages />
+        <Pages toggle={toggle} isOpen={isOpen}/>
         <Footer/>
       </BrowserRouter>
     </main>
