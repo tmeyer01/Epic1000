@@ -61,12 +61,6 @@ function App() {
       <BrowserRouter>
         <MobileSideBar toggle={toggle} isOpen={isOpen}/>
         <Nav toggle={toggle} isOpen={isOpen}/>
-        {/* <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Rules" element={<Rules/>} />
-          <Route path="/Route" element={<RoutePage/>} />
-        </Routes> */}
         <Pages />
         <Footer/>
       </BrowserRouter>
